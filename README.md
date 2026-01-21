@@ -17,15 +17,15 @@ VS Code extension providing comprehensive FANUC TP (.tp, .ls) language support v
 
 Download the latest release directly:
 ```bash
-curl -L -O https://github.com/shiftreset/vscode-plugin-shiftreset/releases/latest/download/shiftreset-run.vsix
+curl -L -O https://github.com/fredrikolis/vscode-plugin-shiftreset/releases/latest/download/shiftreset-run.vsix
 code --install-extension shiftreset-run.vsix
 ```
 
-Or visit the [releases page](https://github.com/shiftreset/vscode-plugin-shiftreset/releases) to download manually.
+Or visit the [releases page](https://github.com/fredrikolis/vscode-plugin-shiftreset/releases) to download manually.
 
 ### From VSIX File in VS Code
 
-1. Download the `.vsix` file from the [releases page](https://github.com/shiftreset/vscode-plugin-shiftreset/releases)
+1. Download the `.vsix` file from the [releases page](https://github.com/fredrikolis/vscode-plugin-shiftreset/releases)
 2. In VS Code, open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
 3. Run "Extensions: Install from VSIX..."
 4. Select the downloaded `.vsix` file
@@ -164,4 +164,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/shiftreset/vscode-plugin-shiftreset).
+Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/fredrikolis/vscode-plugin-shiftreset).
