@@ -3,7 +3,7 @@
   "displayName": "shiftreset.run",
   "description": "Language support, linting, formatting, and compliance checking for FANUC TP programs via shiftreset.run",
   "version": "0.1.4",
-  "publisher": "shiftreset",
+  "publisher": "Olis-Robotics",
   "license": "MIT",
   "repository": {
     "type": "git",
