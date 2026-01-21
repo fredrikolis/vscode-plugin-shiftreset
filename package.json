@@ -1,0 +1,98 @@
+{
+  "name": "shiftreset-run",
+  "displayName": "shiftreset.run",
+  "description": "Language support, linting, formatting, and compliance checking for FANUC TP programs via shiftreset.run",
+  "version": "0.1.1",
+  "publisher": "shiftreset",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiftreset/vscode-plugin-shiftreset"
+  },
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=18"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:fanuc-tp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configurationDefaults": {
+      "[fanuc-tp]": {
+        "editor.inlayHints.enabled": "on"
+      }
+    },
+    "languages": [
+      {
+        "id": "fanuc-tp",
+        "aliases": [
+          "FANUC TP",
+          "fanuc-tp"
+        ],
+        "extensions": [
+          ".tp",
+          ".ls"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fanuc-tp",
+        "scopeName": "source.fanuc-tp",
+        "path": "./syntaxes/fanuc-tp.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "shiftreset.lintFile",
+        "title": "Lint Current File",
+        "category": "shiftreset.run"
+      },
+      {
+        "command": "shiftreset.fixFile",
+        "title": "Fix Current File",
+        "category": "shiftreset.run"
+      },
+      {
+        "command": "shiftreset.fixFileUnsafe",
+        "title": "Fix Current File (Unsafe)",
+        "category": "shiftreset.run"
+      },
+      {
+        "command": "shiftreset.formatFile",
+        "title": "Format Current File",
+        "category": "shiftreset.run"
+      },
+      {
+        "command": "shiftreset.checkCompliance",
+        "title": "Check Compliance",
+        "category": "shiftreset.run"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "precompile": "node scripts/fetch-grammar.js",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vscode/vsce": "^3.7.1",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.17"
+  }
+}

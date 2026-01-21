@@ -1,0 +1,7 @@
+node_modules/
+out/
+*.vsix
+.vscode-test/
+
+# Generated at build time
+syntaxes/fanuc-tp.tmLanguage.json

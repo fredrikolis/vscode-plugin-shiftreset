@@ -1,0 +1,44 @@
+# Source files (compiled to out/)
+src/**
+
+# TypeScript configuration
+tsconfig.json
+
+# Development dependencies and configs
+node_modules/**
+.vscode/**
+.vscode-test/**
+
+# Test fixtures
+test-fixtures/**
+
+# Build artifacts
+out/test/**
+**/*.map
+**/*.d.ts
+**/*.d.ts.map
+vitest.config.ts
+
+# Development files
+.gitignore
+.eslintrc*
+eslint.config.*
+*.md
+!README.md
+!CHANGELOG.md
+!LICENSE.md
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# npm files
+package-lock.json
+npm-debug.log
+
+# Git
+.git/**
+.github/**
