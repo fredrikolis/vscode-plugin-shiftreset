@@ -423,6 +423,11 @@ export class ShiftresetClient {
         };
       }
 
+      // API returns diagnostics as an array directly, wrap it in the expected format
+      if (Array.isArray(json)) {
+        json = { diagnostics: json };
+      }
+
       return { success: true, data: json as T };
     } else if (contentType.includes("text/plain")) {
       // Parse plain text response (for format endpoint)
