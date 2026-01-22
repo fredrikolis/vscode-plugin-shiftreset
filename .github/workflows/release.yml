@@ -42,3 +42,7 @@ jobs:
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to VS Code Marketplace
+        run: npx @vscode/vsce publish --pat ${{ secrets.VSCODE_MARKETPLACE_TOKEN }}
+        if: ${{ secrets.VSCODE_MARKETPLACE_TOKEN != '' }}
